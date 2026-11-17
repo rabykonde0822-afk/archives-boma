@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archives des Prêtres — Diocèse de Boma</title>
+<meta name="description" content="Archives des prêtres du diocèse de Boma : vie, ordination et parcours pastoral de ceux qui ont servi et servent l'Église de Boma.">
+<meta name="theme-color" content="#7a1f2b">
+<meta property="og:title" content="Archives des Prêtres — Diocèse de Boma">
+<meta property="og:description" content="Mémoire vivante des prêtres du diocèse de Boma.">
+<meta property="og:image" content="cathedrale.jpg">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f1e7; --paper:#fffdf8; --ink:#2a2420; --muted:#76695f; --line:#e6d9c3;
+  --accent:#7a1f2b; --accent-d:#5e1520; --gold:#c9a14a; --gold-d:#a8833a; --gold-l:#f3d98e;
+  --marian:#1f4e8c; --marian-soft:#e6eef9; --violet:#5b3a7a; --violet-soft:#efe8f6; --green:#2f6b4f; --green-soft:#e3f1e8;
+  --radius:14px; --shadow:0 1px 2px rgba(42,36,32,.06),0 6px 20px rgba(42,36,32,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:15.5px/1.6 Inter,system-ui,sans-serif;background-color:var(--bg);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M28 20v16M22 26h12' stroke='%23c9a14a' stroke-opacity='.15' stroke-width='1.6' fill='none'/%3E%3C/svg%3E")}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;margin:0;letter-spacing:.3px;line-height:1.15}
+a{color:var(--accent)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.hidden{display:none!important}
+
+/* ---------- navigation ---------- */
+.nav{position:sticky;top:0;z-index:30;background:rgba(94,21,32,.97);backdrop-filter:blur(6px);color:#fbf4ea;border-bottom:2px solid var(--gold)}
+.nav .wrap{display:flex;align-items:center;gap:14px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;color:#fbf4ea;text-decoration:none;font-family:"Cormorant Garamond",serif;font-weight:700;font-size:20px;white-space:nowrap}
+.logo .mark{width:34px;height:34px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold-l);font-size:17px}
+.logo small{display:block;font-family:Inter,sans-serif;font-weight:500;font-size:11px;opacity:.75;letter-spacing:.4px}
+.menu{display:flex;gap:4px;margin-left:auto}
+.menu a{color:#f6e9d6;text-decoration:none;padding:8px 12px;border-radius:8px;font-size:14.5px;font-weight:500}
+.menu a:hover{background:rgba(255,255,255,.08)}
+.menu a.on{background:rgba(201,161,74,.22);color:#fff3cf}
+.burger{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:8px;padding:6px 10px;font-size:18px}
+.vitrail{height:12px;display:flex;border-bottom:2px solid #3a2a1e}
+.vitrail span{flex:1;border-right:2px solid #3a2a1e}
+.vitrail span:nth-child(6n+1){background:linear-gradient(180deg,#2b5fae,#1f4e8c)}
+.vitrail span:nth-child(6n+2){background:linear-gradient(180deg,#e0b84f,#c9a14a)}
+.vitrail span:nth-child(6n+3){background:linear-gradient(180deg,#b3263a,#8d1f2e)}
+.vitrail span:nth-child(6n+4){background:linear-gradient(180deg,#3f8a5f,#2f6b4f)}
+.vitrail span:nth-child(6n+5){background:linear-gradient(180deg,#7a4fa3,#5b3a7a)}
+.vitrail span:nth-child(6n+6){background:linear-gradient(180deg,#f2e3b3,#e2cd8c)}
+
+/* ---------- accueil ---------- */
+.hero{background:linear-gradient(160deg,#5e1520 0%,#7a1f2b 55%,#8d2a35 100%);color:#fbf4ea;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:-90px;bottom:-140px;width:340px;height:340px;border:1px solid rgba(243,217,142,.18);border-radius:50%}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:48px;padding-bottom:56px;position:relative;z-index:1}
+.kicker{color:var(--gold-l);text-transform:uppercase;letter-spacing:2px;font-size:12.5px;font-weight:600}
+.hero h1{font-size:52px;margin:10px 0 14px}
+.hero p.lead{font-size:17px;opacity:.92;max-width:560px;margin:0 0 24px}
+.hero .by{color:var(--gold-l);font-style:italic}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--paper);padding:10px 16px;border-radius:10px;font-weight:500;display:inline-flex;gap:8px;align-items:center;text-decoration:none;color:var(--ink)}
+.btn:hover{border-color:#cdbfae}
+.btn.primary{background:linear-gradient(180deg,#8d2a35,#6d1b26);border-color:#5e1520;color:#fff;box-shadow:inset 0 0 0 1px rgba(243,217,142,.35)}
+.btn.primary:hover{background:linear-gradient(180deg,#7a1f2b,#5e1520)}
+.btn.gold{background:linear-gradient(180deg,#e0b84f,#c9a14a);border-color:#a8833a;color:#3a2410}
+.btn.outline-l{background:transparent;color:#fbf4ea;border-color:rgba(243,217,142,.55)}
+.btn.outline-l:hover{background:rgba(255,255,255,.07)}
+.btn.sm{padding:6px 11px;font-size:13px}
+.btn.danger{color:#9b1c1c}
+.btn.ghost{background:transparent;border-color:transparent}
+.arch{justify-self:center;width:100%;max-width:330px;aspect-ratio:3/4;border-radius:170px 170px 14px 14px;overflow:hidden;border:4px solid var(--gold);box-shadow:0 0 0 8px rgba(201,161,74,.18),0 24px 50px rgba(0,0,0,.35);position:relative}
+.arch img{width:100%;height:100%;object-fit:cover;display:block}
+.arch figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 10px;background:linear-gradient(transparent,rgba(30,10,14,.8));color:#fff;font-size:13px;text-align:center;font-family:"Cormorant Garamond",serif;font-size:17px;font-style:italic}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-30px;position:relative;z-index:2}
+.stat{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);text-align:center}
+.stat b{display:block;font-family:"Cormorant Garamond",serif;font-size:36px;line-height:1;color:var(--accent)}
+.stat span{font-size:12.5px;color:var(--muted)}
+
+section.block{padding:40px 0 10px}
+.orn{display:flex;align-items:center;gap:14px;color:var(--gold-d);margin:0 0 22px;font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;text-align:center}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.orn span::before,.orn span::after{content:" ✝ ";color:var(--gold);font-size:15px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);text-align:center}
+.feature .ic{width:52px;height:52px;margin:0 auto 10px;border-radius:26px 26px 8px 8px;display:grid;place-items:center;font-size:22px;background:linear-gradient(180deg,#fbeee0,#f3e0c8);box-shadow:0 0 0 2px var(--gold)}
+.feature h3{font-size:22px;color:var(--accent);margin-bottom:6px}
+.feature p{margin:0;color:var(--muted);font-size:14.5px}
+.verse{margin:40px auto 10px;max-width:760px;text-align:center;padding:26px 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.verse q{font-family:"Cormorant Garamond",serif;font-size:28px;font-style:italic;color:var(--accent);quotes:"« " " »"}
+.verse div{color:var(--muted);margin-top:6px}
+
+/* ---------- liste ---------- */
+.pagehead{padding:34px 0 8px;text-align:center}
+.pagehead h1{font-size:42px;color:var(--accent)}
+.pagehead p{color:var(--muted);margin:6px auto 0;max-width:620px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:20px 0 18px}
+.search{flex:1 1 260px;position:relative}
+.search input{width:100%;padding:11px 12px 11px 38px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.5}
+select{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)!important;box-shadow:0 0 0 3px rgba(201,161,74,.2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px;padding-bottom:30px}
+.card{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);cursor:pointer;display:flex;gap:14px;align-items:flex-start;transition:transform .12s;text-align:left;position:relative;text-decoration:none;color:inherit}
+.card:hover{transform:translateY(-2px)}
+.card::after{content:"✝";position:absolute;right:12px;top:8px;color:var(--gold);opacity:.55;font-size:14px}
+.card.actif{border-top-color:var(--green)}
+.card.decede{border-top-color:var(--violet)}
+.card.decede::after{color:var(--violet)}
+.avatar{width:58px;height:58px;flex:none;border-radius:29px 29px 8px 8px;background:linear-gradient(180deg,#fbeee0,#f3e0c8);color:var(--accent);display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-size:23px;font-weight:700;overflow:hidden;border:2px solid #fff;box-shadow:0 0 0 2px var(--gold),0 2px 6px rgba(0,0,0,.1)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.card h3{font-size:20px}
+.card .meta{color:var(--muted);font-size:13px;margin-top:3px}
+.tag{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:99px;margin-top:8px}
+.tag.actif{background:var(--green-soft);color:var(--green)}
+.tag.retraite{background:#f8edd3;color:#8a6417}
+.tag.decede{background:var(--violet-soft);color:var(--violet)}
+.tag.decede::before{content:"✝ "}
+.tag.autre{background:var(--marian-soft);color:var(--marian)}
+.empty{grid-column:1/-1;text-align:center;padding:46px 20px;color:var(--muted);background:linear-gradient(180deg,#fffdf8,#fbf3e3);border:1px solid var(--line);border-radius:var(--radius)}
+.empty h3{color:var(--ink);font-size:24px;margin-bottom:6px}
+.empty h3::before{content:"✝";display:block;color:var(--gold);font-size:26px;margin-bottom:4px}
+
+/* in memoriam */
+.mem .card{border-top-color:var(--violet);background:linear-gradient(180deg,#fffdf8,#f7f2fb)}
+.candle{display:inline-block;width:10px;height:22px;border-radius:3px;background:linear-gradient(#fff,#efe6d5);border:1px solid #d9cbb0;position:relative;margin-right:8px;vertical-align:-4px}
+.candle::before{content:"";position:absolute;left:50%;top:-12px;width:8px;height:12px;transform:translateX(-50%);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(circle at 50% 70%,#fff6c4,#f2b33d 55%,#e0761c);animation:fl 2.4s infinite ease-in-out}
+@keyframes fl{50%{transform:translateX(-50%) scaleY(1.12) rotate(-3deg)}}
+
+/* fiche */
+.detail{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:var(--radius);box-shadow:var(--shadow);margin:20px 0 40px;overflow:hidden}
+.detail-head{display:flex;gap:22px;align-items:center;padding:26px;border-bottom:1px solid #ead9b8;background:linear-gradient(135deg,#fff8ea 0%,#fbf1df 60%,#eef3fb 100%);flex-wrap:wrap}
+.detail-head .avatar{width:104px;height:104px;font-size:38px;border-radius:52px 52px 12px 12px}
+.detail-head h2{font-size:34px}
+.detail-head .sub{color:var(--muted);margin-top:4px}
+.detail-body{display:grid;grid-template-columns:300px 1fr}
+.facts{padding:22px 24px;border-right:1px solid var(--line);background:linear-gradient(180deg,#fbf6ec,#fffdf8)}
+.facts dl{margin:0}
+.facts dt{font-size:11.5px;text-transform:uppercase;letter-spacing:.8px;color:var(--gold-d);margin-top:14px}
+.facts dt:first-child{margin-top:0}
+.facts dd{margin:2px 0 0;font-weight:500}
+.main{padding:22px 26px}
+.main h3{display:flex;align-items:center;gap:8px;font-size:23px;color:var(--accent);border-bottom:1px solid #eadfc9;padding-bottom:6px;margin-bottom:12px}
+.main h3::before{content:"✝";color:var(--gold);font-size:16px}
+.main section+section{margin-top:26px}
+.bio{white-space:pre-wrap}
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--gold),#e8d6ae)}
+.timeline li{position:relative;padding:0 0 18px 30px}
+.timeline li::before{content:"";position:absolute;left:1px;top:5px;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--marian)}
+.timeline li.ord::before{background:var(--gold);border-color:var(--gold-d);box-shadow:0 0 0 3px rgba(201,161,74,.25)}
+.timeline .when{font-size:12.5px;color:var(--muted);font-weight:600}
+.timeline .what{font-weight:600}
+.timeline li.ord .what{color:var(--accent)}
+.timeline .where{color:var(--muted);font-size:14px}
+.muted{color:var(--muted)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+
+/* à propos */
+.prose{max-width:760px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px;box-shadow:var(--shadow)}
+.prose h2{color:var(--accent);font-size:26px;margin:20px 0 8px}
+.prose h2:first-child{margin-top:0}
+
+/* don */
+.menu a.don-link{background:linear-gradient(180deg,#e0b84f,#c9a14a);color:#3a2410;margin-left:6px}
+.menu a.don-link:hover,.menu a.don-link.on{background:linear-gradient(180deg,#ecc65c,#d4ab52);color:#3a2410}
+.don-card{max-width:520px;margin:22px auto 0;background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 24px;text-align:center}
+.don-head{display:flex;gap:8px;justify-content:center;align-items:center}
+.om{background:#ff7900;color:#fff;font-weight:700;padding:4px 12px;border-radius:6px;letter-spacing:.3px}
+.don-num{font-family:"Cormorant Garamond",serif;font-size:44px;font-weight:700;color:var(--accent);letter-spacing:1px;margin-top:12px}
+.don-mobile{display:none;white-space:nowrap;margin-left:auto;background:linear-gradient(180deg,#e0b84f,#c9a14a);color:#3a2410;text-decoration:none;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px}
+.fab{position:fixed;right:16px;bottom:18px;z-index:40;background:linear-gradient(180deg,#8d2a35,#6d1b26);color:#fff;text-decoration:none;font-weight:600;font-size:14px;padding:11px 16px;border-radius:99px;border:2px solid var(--gold);box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.fab:hover{background:linear-gradient(180deg,#7a1f2b,#5e1520)}
+@media (max-width:820px){.fab span{display:none}.fab{padding:11px 13px;font-size:18px}}
+@media print{.fab{display:none!important}}
+/* admin */
+.adminbar{background:#fff7e3;border:1px solid #ecd9a6;border-radius:12px;padding:12px 14px;margin:18px 0 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:14px;color:#6b5418}
+.adminbar b{color:#4a3a0e}
+.adminbar .sp{flex:1}
+.pill{background:#e8a33d;color:#fff;border-radius:99px;padding:2px 9px;font-size:12px;font-weight:600}
+.pill.ok{background:var(--green)}
+
+/* modal */
+.overlay{position:fixed;inset:0;background:rgba(30,22,18,.5);display:flex;align-items:flex-start;justify-content:center;padding:28px 12px;overflow:auto;z-index:50}
+.modal{background:var(--paper);border-radius:14px;border-top:4px solid var(--gold);width:100%;max-width:780px;box-shadow:0 20px 60px rgba(0,0,0,.28)}
+.modal header{padding:16px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center}
+.modal header h2{font-size:26px;color:var(--accent)}
+.modal .body{padding:18px 22px}
+.modal footer{padding:14px 22px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+.full{grid-column:1/-1}
+.fl{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin-bottom:4px}
+.fgrid input,.fgrid select,.fgrid textarea,.prow input{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:#fff}
+textarea{min-height:110px;resize:vertical}
+fieldset{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:16px 0 0}
+legend{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:19px;padding:0 6px;color:var(--gold-d)}
+.prow{display:grid;grid-template-columns:90px 90px 1fr 1fr 34px;gap:8px;margin-bottom:8px;align-items:center}
+.prow-h{font-size:11.5px;color:var(--muted);font-weight:600}
+.x{border:none;background:#f5eeee;color:#9b1c1c;border-radius:8px;height:36px}
+.photo-pick{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+.steps{margin:0;padding-left:20px}
+.steps li{margin:6px 0}
+code{background:#f3ebdc;padding:1px 6px;border-radius:5px;font-size:13px}
+
+footer.foot{margin-top:40px;background:linear-gradient(160deg,#4a1019,#5e1520);color:#ecdcc7;padding:30px 0 26px;border-top:3px solid var(--gold);text-align:center;font-size:13.5px}
+footer.foot .lat{font-family:"Cormorant Garamond",serif;font-size:21px;font-style:italic;color:var(--gold-l)}
+footer.foot a{color:var(--gold-l)}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#2a2420;color:#fff;padding:10px 16px;border-radius:10px;font-size:14px;z-index:60;box-shadow:var(--shadow);max-width:90vw;text-align:center}
+
+@media (max-width:820px){
+  .menu{display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;background:#5e1520;padding:8px 14px 14px;border-bottom:2px solid var(--gold)}
+  .menu.open{display:flex}
+  .burger{display:block;margin-left:8px}
+  .don-mobile{display:inline-block}
+  .logo{font-size:17px}
+  .hero .wrap{grid-template-columns:1fr;gap:26px;padding-top:30px;text-align:center}
+  .hero .arch{order:-1;max-width:240px}
+  .hero h1{font-size:38px}
+  .hero p.lead{margin-left:auto;margin-right:auto}
+  .cta{justify-content:center}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .three{grid-template-columns:1fr}
+  .detail-body{grid-template-columns:1fr}
+  .facts{border-right:none;border-bottom:1px solid var(--line)}
+  .fgrid{grid-template-columns:1fr}
+  .prow{grid-template-columns:1fr 1fr 34px}
+  .prow .pf,.prow .pl{grid-column:1/3}
+  .prow-h{display:none}
+  .pagehead h1{font-size:34px}
+  .logo small{display:none}
+  .orn{font-size:18px;gap:8px}
+  .orn span::before,.orn span::after{font-size:12px}
+}
+@media (max-width:400px){
+  .nav .wrap{padding:0 12px;gap:8px}
+  .logo{font-size:15px;gap:7px}
+  .logo .mark{width:30px;height:30px;font-size:15px}
+  .don-mobile{padding:5px 9px;font-size:13px}
+  .burger{padding:5px 8px;margin-left:4px}
+}
+@media print{
+  .nav,.vitrail,footer.foot,.actions,.toolbar,[data-back],.adminbar,.toast{display:none!important}
+  body{background:#fff}
+  .detail{box-shadow:none;border:1px solid #ccc}
+  .detail-body{grid-template-columns:240px 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="#accueil"><span class="mark">✝</span><span>Archives des Prêtres<small>Diocèse de Boma</small></span></a>
+    <a href="#don" class="don-mobile">♥ Don</a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+    <div class="menu" id="menu">
+      <a href="#accueil" data-nav="accueil">Accueil</a>
+      <a href="#pretres" data-nav="pretres">Nos prêtres</a>
+      <a href="#memoriam" data-nav="memoriam">In memoriam</a>
+      <a href="#a-propos" data-nav="a-propos">À propos</a>
+      <a href="#suggestions" data-nav="suggestions">Suggestions</a>
+      <a href="#don" data-nav="don" class="don-link">♥ Faire un don</a>
+    </div>
+  </div>
+</nav>
+<div class="vitrail" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<div id="adminbar-slot" class="wrap"></div>
+
+<!-- ACCUEIL -->
+<div id="v-accueil" class="view">
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <div class="kicker">Diocèse de Boma · Archives</div>
+        <h1>La mémoire vivante de nos prêtres</h1>
+        <p class="lead">Leur vie, leur ordination et chaque étape de leur ministère au service du peuple de Dieu. Ces archives rassemblent l'histoire de ceux qui ont servi et servent l'Église de Boma.<br><span class="by">— by Ir Raby</span></p>
+        <div class="cta">
+          <a class="btn gold" href="#pretres">Découvrir nos prêtres</a>
+          <a class="btn outline-l" href="#memoriam">In memoriam</a>
+          <a class="btn outline-l" href="#don">♥ Faire un don</a>
+        </div>
+      </div>
+      <figure class="arch"><img src="cathedrale.jpg" alt="Cathédrale de Boma"><figcaption>Cathédrale de Boma</figcaption></figure>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b data-stat="total">0</b><span>Prêtres archivés</span></div>
+      <div class="stat"><b data-stat="actif">0</b><span>En ministère</span></div>
+      <div class="stat"><b data-stat="retraite">0</b><span>Émérites</span></div>
+      <div class="stat"><b data-stat="decede">0</b><span>In memoriam</span></div>
+    </div>
+
+    <section class="block">
+      <div class="orn"><span>Les archives</span></div>
+      <div class="three">
+        <div class="feature"><div class="ic">📜</div><h3>Une vie</h3><p>Naissance, famille, formation au séminaire : les racines de chaque vocation.</p></div>
+        <div class="feature"><div class="ic">✝</div><h3>Une ordination</h3><p>Le jour où chacun a été configuré au Christ, Bon Pasteur, pour toujours.</p></div>
+        <div class="feature"><div class="ic">⛪</div><h3>Un parcours</h3><p>Paroisses, missions et services : chaque affectation, année après année.</p></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="orn"><span>Récemment ajoutés</span></div>
+      <div id="recent" class="grid"></div>
+    </section>
+
+    <div class="verse">
+      <q>In memoria aeterna erit iustus</q>
+      <div>Le juste laissera un souvenir éternel (Ps 111, 7)</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRÊTRES -->
+<div id="v-pretres" class="view hidden">
+  <div class="wrap">
+    <div class="pagehead"><h1>Nos prêtres</h1><p>Recherchez un prêtre par son nom, une paroisse, un lieu ou une fonction.</p></div>
+    <div class="toolbar">
+      <div class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Nom, paroisse, lieu, fonction…">
+      </div>
+      <select id="f-statut" aria-label="Statut">
+        <option value="">Tous les statuts</option>
+        <option value="actif">En ministère</option>
+        <option value="retraite">Émérite / retraité</option>
+        <option value="decede">Décédé</option>
+        <option value="autre">Autre</option>
+      </select>
+      <select id="f-tri" aria-label="Tri">
+        <option value="nom">Tri : nom (A→Z)</option>
+        <option value="ord-asc">Tri : ordination (ancienne)</option>
+        <option value="ord-desc">Tri : ordination (récente)</option>
+      </select>
+      <button class="btn primary admin-only hidden" data-add>＋ Ajouter un prêtre</button>
+    </div>
+    <div id="grid" class="grid"></div>
+  </div>
+</div>
+
+<!-- IN MEMORIAM -->
+<div id="v-memoriam" class="view hidden">
+  <div class="wrap">
+    <div class="pagehead"><h1><span class="candle"></span>In memoriam</h1><p>Nous confions à la miséricorde du Père nos prêtres défunts, qui ont donné leur vie au service de l'Église de Boma. « Je suis la résurrection et la vie » (Jn 11, 25).</p></div>
+    <div id="grid-mem" class="grid mem" style="margin-top:20px"></div>
+  </div>
+</div>
+
+<!-- À PROPOS -->
+<div id="v-a-propos" class="view hidden">
+  <div class="wrap">
+    <div class="pagehead"><h1>À propos</h1></div>
+    <div class="prose" style="margin-top:16px">
+      <h2>Pourquoi ces archives ?</h2>
+      <p>Chaque prêtre du diocèse de Boma porte une histoire : une famille, une vocation, une ordination, des années de ministère dans les paroisses et les œuvres. Ces archives veulent garder vivante cette mémoire, pour rendre grâce, pour transmettre aux générations futures et pour servir la recherche.</p>
+      <h2>Ce que contient une fiche</h2>
+      <p>Identité et naissance, formation, ordination diaconale et sacerdotale, incardination, parcours pastoral (fonctions et lieux, avec les années), biographie, témoignages et sources.</p>
+      <h2>Contribuer</h2>
+      <p>Vous avez une information, une photo, un témoignage ou une correction à proposer ? Écrivez-nous en précisant vos sources (registres, documents, entretiens) :</p>
+      <p style="text-align:center;margin:14px 0"><a class="btn gold" href="mailto:rabykonde0822@gmail.com?subject=Archives%20des%20pr%C3%AAtres%20-%20Dioc%C3%A8se%20de%20Boma">✉ rabykonde0822@gmail.com</a></p>
+      <h2>Réalisation</h2>
+      <p>Site conçu et réalisé <b>by Ir Raby</b> — <a href="mailto:rabykonde0822@gmail.com">rabykonde0822@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- DON -->
+<div id="v-don" class="view hidden">
+  <div class="wrap">
+    <div class="pagehead"><h1>♥ Faire un don</h1><p>Votre générosité soutient la recherche, la numérisation et la préservation des archives des prêtres du diocèse de Boma. Merci de tout cœur.</p></div>
+    <div class="don-card">
+      <div class="don-head"><span class="om">Orange Money</span><span class="muted">RDC</span></div>
+      <div class="don-num" id="don-num">089 630 8822</div>
+      <div class="muted" style="margin-top:2px">Titulaire : <b style="color:var(--ink)">Ir Raby</b> · International : +243 896 308 822</div>
+      <div class="cta" style="justify-content:center;margin-top:16px">
+        <button class="btn gold" data-copy="0896308822">⧉ Copier le numéro</button>
+      </div>
+      <ol class="steps" style="text-align:left;margin-top:20px">
+        <li>Ouvrez <b>Orange Money</b> sur votre téléphone.</li>
+        <li>Choisissez <b>Transfert d'argent</b> et entrez le numéro <b>0896308822</b>.</li>
+        <li>Indiquez le montant de votre choix, vérifiez le nom du titulaire, puis confirmez.</li>
+      </ol>
+      <p class="muted" style="margin:16px 0 0">Après votre don, écrivez-nous si vous le souhaitez à <a href="mailto:rabykonde0822@gmail.com?subject=Don%20-%20Archives%20des%20pr%C3%AAtres%20de%20Boma">rabykonde0822@gmail.com</a> : nous serons heureux de vous remercier.</p>
+    </div>
+    <div class="verse" style="margin-top:30px"><q>Dieu aime celui qui donne avec joie</q><div>2 Co 9, 7</div></div>
+  </div>
+</div>
+
+<!-- SUGGESTIONS -->
+<div id="v-suggestions" class="view hidden">
+  <div class="wrap">
+    <div class="pagehead"><h1>💬 Vos suggestions</h1><p>Une idée pour améliorer le site, une correction sur une fiche, une information ou un témoignage sur un prêtre ? Écrivez-nous.</p></div>
+    <form id="sugg" class="don-card" style="text-align:left;max-width:600px">
+      <div class="fgrid">
+        <div><label class="fl" for="s_nom">Votre nom</label><input id="s_nom" name="nom" autocomplete="name"></div>
+        <div><label class="fl" for="s_contact">Téléphone ou e-mail (facultatif)</label><input id="s_contact" name="contact"></div>
+        <div class="full"><label class="fl" for="s_type">Type de suggestion</label>
+          <select id="s_type" name="type">
+            <option>Idée pour améliorer le site</option>
+            <option>Correction sur une fiche</option>
+            <option>Information ou témoignage sur un prêtre</option>
+            <option>Proposer un prêtre à ajouter</option>
+            <option>Autre</option>
+          </select></div>
+        <div class="full"><label class="fl" for="s_msg">Votre message *</label><textarea id="s_msg" name="message" required placeholder="Écrivez votre suggestion ici…"></textarea></div>
+      </div>
+      <div class="cta" style="margin-top:16px;justify-content:flex-end">
+        <button type="button" class="btn" data-copysugg>⧉ Copier le message</button>
+        <button type="submit" class="btn primary">✉ Envoyer par e-mail</button>
+      </div>
+      <p id="sugg-note" class="muted" style="margin:14px 0 0;font-size:14px">Le bouton « Envoyer » ouvre votre messagerie avec le message déjà rempli ; il vous suffit d'appuyer sur Envoyer. Si rien ne s'ouvre, copiez le message et envoyez-le à <b>rabykonde0822@gmail.com</b>.</p>
+    </form>
+  </div>
+</div>
+
+<!-- FICHE -->
+<div id="v-fiche" class="view hidden"><div class="wrap" id="fiche"></div></div>
+
+<footer class="foot">
+  <div class="lat">« In memoria aeterna erit iustus »</div>
+  <div style="margin-top:4px">✝ Archives des Prêtres — Diocèse de Boma · by Ir Raby</div>
+  <div style="margin-top:4px"><a href="#don">♥ Faire un don</a> · <a href="#suggestions">💬 Suggestions</a> · ✉ Contact : <a href="mailto:rabykonde0822@gmail.com">rabykonde0822@gmail.com</a></div>
+  <div style="margin-top:6px;opacity:.7;font-size:12px"><a href="#admin">🔑 Espace administrateur</a></div>
+</footer>
+
+<a href="#suggestions" class="fab" id="fab" title="Faire une suggestion">💬 <span>Suggestions</span></a>
+<div id="modal-root"></div>
+<div id="toast" class="toast hidden"></div>
+
+<script>
+(() => {
+  const STATUTS = {actif:"En ministère", retraite:"Émérite / retraité", decede:"Décédé", autre:"Autre"};
+  const state = { published: [], draft: null, admin: false, loaded: false, editing: null, view: "accueil" };
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const norm = s => String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  const list = () => state.admin && state.draft ? state.draft : state.published;
+
+  /* ---------- helpers ---------- */
+  const MOIS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+  function fmtDate(d){
+    if(!d) return ""; if(/^\d{4}$/.test(d)) return d;
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d); if(!m) return d;
+    return `${+m[3]} ${MOIS[+m[2]-1]} ${m[1]}`;
+  }
+  const year = d => (d && /^\d{4}/.test(d)) ? +d.slice(0,4) : null;
+  function initials(p){ const n=(p.nom||"").trim(), pr=(p.prenom||"").trim(); return ((pr[0]||"")+(n[0]||"")).toUpperCase() || "✝"; }
+  const fullName = p => [p.titre, p.prenom, p.nom].filter(Boolean).join(" ");
+  const avatar = p => `<div class="avatar">${p.photo?`<img src="${esc(p.photo)}" alt="">`:esc(initials(p))}</div>`;
+  function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.remove("hidden"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.add("hidden"),3000); }
+  const newId = () => "p" + Date.now().toString(36) + Math.random().toString(36).slice(2,7);
+
+  /* ---------- brouillon administrateur (IndexedDB) ---------- */
+  const store = (() => {
+    let dbp;
+    const open = () => dbp || (dbp = new Promise((res, rej) => {
+      const r = indexedDB.open("archives-boma-site", 1);
+      r.onupgradeneeded = () => r.result.createObjectStore("kv");
+      r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+    }));
+    const tx = async (mode, fn) => { const d = await open(); return new Promise((res, rej) => {
+      const t = d.transaction("kv", mode), st = t.objectStore("kv"); let out; const r = fn(st);
+      if(r) r.onsuccess = () => out = r.result; t.oncomplete = () => res(out); t.onerror = t.onabort = () => rej(t.error); }); };
+    return { get: k => tx("readonly", s => s.get(k)), set: (k,v) => tx("readwrite", s => s.put(v,k)), del: k => tx("readwrite", s => s.delete(k)) };
+  })();
+  async function saveDraft(){ try{ await store.set("draft", state.draft); }catch(e){ toast("Impossible d'enregistrer le brouillon sur cet appareil."); throw e; } }
+  const sig = arr => JSON.stringify([...arr].sort((a,b)=>a.id<b.id?-1:1));
+  const unpublished = () => state.draft && sig(state.draft) !== sig(state.published);
+
+  /* ---------- chargement ---------- */
+  async function load(){
+    try{
+      const r = await fetch("pretres.json", {cache:"no-store"});
+      if(r.ok){ const d = await r.json(); state.published = Array.isArray(d) ? d : (d.pretres || []); }
+    }catch(e){ /* fichier absent : archives vides */ }
+    state.loaded = true;
+    if(state.admin) await loadDraft();
+    renderAll(); route();
+  }
+  async function loadDraft(){
+    try{ state.draft = await store.get("draft"); }catch(e){ state.draft = null; }
+    if(!state.draft) state.draft = JSON.parse(JSON.stringify(state.published));
+  }
+
+  /* ---------- rendu ---------- */
+  function haystack(p){ return norm([fullName(p), p.lieuNaissance, p.incardination, p.biographie, p.seminaire, ...(p.parcours||[]).flatMap(x=>[x.fonction,x.lieu])].join(" ")); }
+  function currentRole(p){
+    const pc = (p.parcours||[]).slice().sort((a,b)=>(+b.debut||0)-(+a.debut||0));
+    const cur = pc.find(x=>!x.fin) || pc[0];
+    return cur ? [cur.fonction, cur.lieu].filter(Boolean).join(" — ") : "";
+  }
+  function card(p){
+    const ord = year(p.dateOrdination);
+    const life = p.statut==="decede" ? `${year(p.dateNaissance)??"?"} – ${year(p.dateDeces)??"?"}` : (p.dateNaissance?`Né en ${year(p.dateNaissance)}`:"");
+    return `<a class="card ${esc(p.statut||"")}" href="#pretre-${esc(p.id)}">
+      ${avatar(p)}
+      <div>
+        <h3>${esc(fullName(p)||"Sans nom")}</h3>
+        <div class="meta">${[life, ord?`Ordonné en ${ord}`:""].filter(Boolean).map(esc).join(" · ")}</div>
+        ${currentRole(p)&&p.statut!=="decede"?`<div class="meta">${esc(currentRole(p))}</div>`:""}
+        <span class="tag ${esc(p.statut||"autre")}">${esc(STATUTS[p.statut]||"—")}</span>
+      </div></a>`;
+  }
+  const byName = (a,b)=> (a.nom||"").localeCompare(b.nom||"","fr") || (a.prenom||"").localeCompare(b.prenom||"","fr");
+  function emptyBox(title, text){ return `<div class="empty"><h3>${title}</h3><p>${text}</p>${state.admin?'<p><button class="btn primary" data-add>＋ Ajouter un prêtre</button></p>':''}</div>`; }
+
+  function renderAll(){
+    const L = list();
+    const n = s => L.filter(p=>p.statut===s).length;
+    $$("[data-stat=total]").forEach(e=>e.textContent=L.length);
+    $$("[data-stat=actif]").forEach(e=>e.textContent=n("actif"));
+    $$("[data-stat=retraite]").forEach(e=>e.textContent=n("retraite"));
+    $$("[data-stat=decede]").forEach(e=>e.textContent=n("decede"));
+    $$(".admin-only").forEach(e=>e.classList.toggle("hidden", !state.admin));
+
+    // récents
+    const rec = L.slice().sort((a,b)=>(b.misAJour||"").localeCompare(a.misAJour||"")).slice(0,6);
+    $("#recent").innerHTML = !state.loaded ? `<div class="empty"><p>Chargement…</p></div>`
+      : rec.length ? rec.map(card).join("") : emptyBox("Les archives sont en préparation", "Les premières fiches seront bientôt publiées.");
+
+    // liste
+    const q = norm($("#q").value.trim()), st = $("#f-statut").value, tri = $("#f-tri").value;
+    let arr = L.filter(p => (!st || p.statut===st) && (!q || haystack(p).includes(q)));
+    if(tri==="nom") arr.sort(byName);
+    else arr.sort((a,b)=>{ const ya=year(a.dateOrdination)??9999, yb=year(b.dateOrdination)??9999; return (tri==="ord-asc"?ya-yb:yb-ya) || byName(a,b); });
+    $("#grid").innerHTML = !state.loaded ? `<div class="empty"><p>Chargement…</p></div>`
+      : !L.length ? emptyBox("Les archives sont en préparation", "Les fiches des prêtres seront bientôt publiées.")
+      : arr.length ? arr.map(card).join("") : `<div class="empty"><h3>Aucun résultat</h3><p>Essayez un autre nom ou retirez le filtre.</p></div>`;
+
+    // memoriam
+    const mem = L.filter(p=>p.statut==="decede").sort((a,b)=>(b.dateDeces||"").localeCompare(a.dateDeces||""));
+    $("#grid-mem").innerHTML = mem.length ? mem.map(card).join("") : `<div class="empty"><h3>Aucune fiche pour le moment</h3><p>Les prêtres défunts du diocèse y seront honorés.</p></div>`;
+
+    renderAdminBar();
+    if(state.view==="fiche") renderFiche(state.ficheId);
+  }
+
+  function renderFiche(id){
+    const p = list().find(x=>x.id===id), v = $("#fiche");
+    if(!p){ v.innerHTML = state.loaded ? `<div class="empty" style="margin:30px 0"><h3>Fiche introuvable</h3><p><a class="btn" href="#pretres">← Retour à la liste</a></p></div>` : ""; return; }
+    const pc = (p.parcours||[]).slice().sort((a,b)=>(+a.debut||0)-(+b.debut||0)), tl = [];
+    if(p.dateDiaconat) tl.push(`<li><div class="when">${esc(fmtDate(p.dateDiaconat))}</div><div class="what">Ordination diaconale</div></li>`);
+    if(p.dateOrdination) tl.push(`<li class="ord"><div class="when">${esc(fmtDate(p.dateOrdination))}</div><div class="what">Ordination sacerdotale</div><div class="where">${esc([p.lieuOrdination, p.ordonnePar?`par ${p.ordonnePar}`:""].filter(Boolean).join(" — "))}</div></li>`);
+    pc.forEach(x=> tl.push(`<li><div class="when">${esc(x.debut||"?")} – ${esc(x.fin||(p.statut==="decede"?"?":"aujourd'hui"))}</div><div class="what">${esc(x.fonction||"")}</div><div class="where">${esc(x.lieu||"")}</div></li>`));
+    if(p.statut==="decede" && p.dateDeces) tl.push(`<li class="ord"><div class="when">${esc(fmtDate(p.dateDeces))}</div><div class="what">Retour à la maison du Père</div><div class="where">${esc(p.lieuDeces||"")}</div></li>`);
+    const fact = (k,val)=> val?`<dt>${k}</dt><dd>${esc(val)}</dd>`:"";
+    v.innerHTML = `
+      <div style="margin-top:18px"><a class="btn ghost" data-back href="#${p.statut==="decede"&&state.from==="memoriam"?"memoriam":"pretres"}">← Retour</a></div>
+      <article class="detail">
+        <div class="detail-head">
+          ${avatar(p)}
+          <div>
+            <h2>${esc(fullName(p))}</h2>
+            <div class="sub">${esc([STATUTS[p.statut], p.incardination].filter(Boolean).join(" · "))}</div>
+            ${p.devise?`<div class="sub" style="font-style:italic">« ${esc(p.devise)} »</div>`:""}
+          </div>
+          <div class="actions">
+            <button class="btn sm" data-print>🖨 Imprimer</button>
+            ${state.admin?`<button class="btn sm" data-edit="${esc(p.id)}">Modifier</button><button class="btn sm danger" data-del="${esc(p.id)}">Supprimer</button>`:""}
+          </div>
+        </div>
+        <div class="detail-body">
+          <aside class="facts"><dl>
+            ${fact("Naissance", [fmtDate(p.dateNaissance), p.lieuNaissance].filter(Boolean).join(", "))}
+            ${fact("Parents", p.parents)}
+            ${fact("Séminaire(s) / formation", p.seminaire)}
+            ${fact("Ordination diaconale", fmtDate(p.dateDiaconat))}
+            ${fact("Ordination sacerdotale", [fmtDate(p.dateOrdination), p.lieuOrdination].filter(Boolean).join(", "))}
+            ${fact("Ordonné par", p.ordonnePar)}
+            ${fact("Incardination / congrégation", p.incardination)}
+            ${fact("Décès", [fmtDate(p.dateDeces), p.lieuDeces].filter(Boolean).join(", "))}
+            ${fact("Inhumation", p.inhumation)}
+          </dl></aside>
+          <div class="main">
+            <section><h3>Parcours sacerdotal</h3>${tl.length?`<ul class="timeline">${tl.join("")}</ul>`:`<p class="muted">Aucune étape enregistrée.</p>`}</section>
+            ${p.biographie?`<section><h3>Biographie</h3><div class="bio">${esc(p.biographie)}</div></section>`:""}
+            ${p.temoignages?`<section><h3>Témoignages & souvenirs</h3><div class="bio">${esc(p.temoignages)}</div></section>`:""}
+            ${p.sources?`<section><h3>Sources</h3><div class="bio muted">${esc(p.sources)}</div></section>`:""}
+          </div>
+        </div>
+      </article>`;
+  }
+
+  /* ---------- navigation ---------- */
+  async function route(){
+    let h = location.hash.slice(1) || "accueil";
+    if(h==="admin"){
+      if(!state.admin){ history.replaceState(null, "", location.pathname + location.search + "#pretres"); loginForm(); }
+      h = "pretres";
+    }
+    $("#menu").classList.remove("open");
+    let view = h;
+    if(h.startsWith("pretre-")){ view = "fiche"; state.ficheId = h.slice(7); }
+    else { if(!["accueil","pretres","memoriam","a-propos","don","suggestions"].includes(h)) view = "accueil"; state.from = view; }
+    state.view = view;
+    $("#fab").classList.toggle("hidden", view==="suggestions");
+    $$(".view").forEach(e=>e.classList.add("hidden"));
+    $("#v-"+view).classList.remove("hidden");
+    $$("[data-nav]").forEach(a=>a.classList.toggle("on", a.dataset.nav===(view==="fiche"?"pretres":view)));
+    if(view==="fiche") renderFiche(state.ficheId);
+    window.scrollTo(0,0);
+  }
+  window.addEventListener("hashchange", route);
+
+  /* ---------- mot de passe ---------- */
+  const DEFAULT_AUTH = {"salt": "a069614c12d6ebebc1bb9d4be5a01261", "iter": 150000, "hash": "dea179f2f57f398cfd88e3d8f3d6a8aebe408e6c7ab12d76b15d3cece1fd2f2d"};
+  let authCfg = null;
+  async function getAuth(){
+    if(authCfg) return authCfg;
+    try{ const r = await fetch("admin.json", {cache:"no-store"}); if(r.ok){ const d = await r.json(); if(d && d.hash && d.salt) return authCfg = d; } }catch(_){}
+    return authCfg = DEFAULT_AUTH;
+  }
+  const hex = buf => [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,"0")).join("");
+  const unhex = h => new Uint8Array(h.match(/../g).map(x=>parseInt(x,16)));
+  async function derive(pw, saltHex, iter){
+    if(!(window.crypto && crypto.subtle)) throw new Error("nocrypto");
+    const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(pw), "PBKDF2", false, ["deriveBits"]);
+    return hex(await crypto.subtle.deriveBits({name:"PBKDF2", hash:"SHA-256", salt:unhex(saltHex), iterations:iter}, key, 256));
+  }
+  let fails = 0, lockUntil = 0;
+  function loginForm(){
+    modal(`<form id="login">
+      <header><h2>🔑 Espace administrateur</h2><button type="button" class="btn ghost" data-close style="margin-left:auto">✕</button></header>
+      <div class="body">
+        <label class="fl" for="pw">Mot de passe</label>
+        <div style="display:flex;gap:8px"><input id="pw" type="password" autocomplete="current-password" style="flex:1;padding:10px 12px;border:1px solid var(--line);border-radius:8px" required>
+        <button type="button" class="btn sm" data-showpw>👁</button></div>
+        <p id="pw-err" class="muted" style="color:#9b1c1c;min-height:1.4em;margin:8px 0 0"></p>
+      </div>
+      <footer><button type="button" class="btn" data-close>Annuler</button><button type="submit" class="btn primary">Entrer</button></footer>
+    </form>`, 420);
+    setTimeout(()=>$("#pw")&&$("#pw").focus(), 50);
+  }
+  async function doLogin(e){
+    e.preventDefault();
+    const err = $("#pw-err"), btn = e.target.querySelector("[type=submit]");
+    if(Date.now() < lockUntil){ err.textContent = `Trop d'essais. Réessayez dans ${Math.ceil((lockUntil-Date.now())/1000)} s.`; return; }
+    btn.disabled = true; err.textContent = "Vérification…";
+    try{
+      const a = await getAuth();
+      const ok = (await derive($("#pw").value, a.salt, a.iter)) === a.hash;
+      if(!ok){ fails++; if(fails>=5){ lockUntil = Date.now()+60000; fails = 0; } err.textContent = "Mot de passe incorrect."; btn.disabled = false; $("#pw").select(); return; }
+    }catch(x){ err.textContent = "Ouvrez le site par son adresse https:// pour vous connecter."; btn.disabled = false; return; }
+    fails = 0; state.admin = true; try{ sessionStorage.setItem("adm","1"); }catch(_){}
+    closeModal(); await loadDraft(); renderAll(); if(state.view==="fiche") renderFiche(state.ficheId);
+    toast("Bienvenue dans l'espace administrateur.");
+  }
+  function pwForm(){
+    modal(`<form id="pwchange">
+      <header><h2>🔑 Changer le mot de passe</h2><button type="button" class="btn ghost" data-close style="margin-left:auto">✕</button></header>
+      <div class="body">
+        <label class="fl" for="np1">Nouveau mot de passe (8 caractères minimum)</label>
+        <input id="np1" type="password" autocomplete="new-password" minlength="8" required style="width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px">
+        <label class="fl" for="np2" style="margin-top:12px">Confirmez le mot de passe</label>
+        <input id="np2" type="password" autocomplete="new-password" minlength="8" required style="width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px">
+        <p id="np-err" style="color:#9b1c1c;min-height:1.4em;margin:8px 0 0"></p>
+        <p class="muted" style="margin:0">Un fichier <code>admin.json</code> sera téléchargé. Déposez-le sur GitHub (Add file → Upload files) : le nouveau mot de passe fonctionnera une ou deux minutes après.</p>
+      </div>
+      <footer><button type="button" class="btn" data-close>Annuler</button><button type="submit" class="btn primary">Créer admin.json</button></footer>
+    </form>`, 480);
+  }
+  async function doPwChange(e){
+    e.preventDefault();
+    const a = $("#np1").value, b = $("#np2").value, err = $("#np-err");
+    if(a.length < 8){ err.textContent = "8 caractères minimum."; return; }
+    if(a !== b){ err.textContent = "Les deux mots de passe ne sont pas identiques."; return; }
+    const salt = hex(crypto.getRandomValues(new Uint8Array(16))), iter = 150000;
+    let hash; try{ hash = await derive(a, salt, iter); }catch(_){ err.textContent = "Impossible ici : ouvrez le site par son adresse https://."; return; }
+    const a2 = document.createElement("a"); a2.href = URL.createObjectURL(new Blob([JSON.stringify({salt, iter, hash})],{type:"application/json"})); a2.download = "admin.json";
+    document.body.appendChild(a2); a2.click(); a2.remove();
+    closeModal(); toast("admin.json téléchargé : déposez-le sur GitHub pour activer le nouveau mot de passe.");
+  }
+
+  /* ---------- administration ---------- */
+  function renderAdminBar(){
+    const slot = $("#adminbar-slot");
+    if(!state.admin){ slot.innerHTML=""; return; }
+    const changed = unpublished();
+    slot.innerHTML = `<div class="adminbar">
+      <b>✝ Administration</b>
+      ${changed?'<span class="pill">Modifications non publiées</span>':'<span class="pill ok">À jour</span>'}
+      <span class="sp"></span>
+      <button class="btn sm primary" data-add>＋ Ajouter</button>
+      <button class="btn sm gold" data-publish>⤓ Publier (pretres.json)</button>
+      <label class="btn sm" style="cursor:pointer">⤒ Importer<input id="imp" type="file" accept=".json,application/json" hidden></label>
+      <button class="btn sm" data-howto>❔ Comment publier</button>
+      <button class="btn sm" data-pwchange>🔑 Mot de passe</button>
+      <button class="btn sm ghost" data-logout>Quitter</button>
+    </div>`;
+    $("#imp").addEventListener("change", e=>{ const f=e.target.files[0]; e.target.value=""; if(f) importFile(f); });
+  }
+  function download(name, text){
+    const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text],{type:"application/json"})); a.download = name;
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
+  }
+  function publish(){
+    const data = state.draft.slice().sort(byName);
+    download("pretres.json", JSON.stringify(data, null, 1));
+    howTo(true);
+  }
+  function howTo(after){
+    modal(`<header><h2>${after?"Fichier prêt : dernière étape":"Comment publier"}</h2><button class="btn ghost" data-close style="margin-left:auto">✕</button></header>
+      <div class="body">
+        ${after?`<p>Le fichier <code>pretres.json</code> vient d'être téléchargé. Pour que les visiteurs voient vos modifications :</p>`:`<p>Vos ajouts sont d'abord gardés comme <b>brouillon</b> sur cet appareil. Pour les mettre en ligne :</p>`}
+        <ol class="steps">
+          ${after?"":"<li>Touchez <b>« Publier (pretres.json) »</b> : un fichier est téléchargé.</li>"}
+          <li>Ouvrez votre dépôt GitHub du site (ex. <code>archives-boma</code>).</li>
+          <li>Touchez <b>Add file → Upload files</b> et déposez <code>pretres.json</code> (il remplace l'ancien).</li>
+          <li>Validez avec <b>Commit changes</b>. Le site est à jour en une ou deux minutes.</li>
+        </ol>
+        <p class="muted">Gardez aussi ce fichier comme sauvegarde. Sur un autre appareil, utilisez « Importer » pour reprendre le travail.</p>
+      </div>
+      <footer><button class="btn primary" data-close>Compris</button></footer>`, 560);
+  }
+  function importFile(file){
+    const r = new FileReader();
+    r.onload = async () => {
+      let d; try{ d = JSON.parse(r.result); }catch(_){ toast("Fichier illisible."); return; }
+      const arr = Array.isArray(d) ? d : d.pretres;
+      if(!Array.isArray(arr)){ toast("Ce fichier n'est pas une liste de fiches."); return; }
+      const m = new Map(state.draft.map(p=>[p.id,p])); let a=0,u=0;
+      for(const p of arr){ if(!p||!p.id) continue; const c=m.get(p.id);
+        if(!c){ m.set(p.id,p); a++; } else if((p.misAJour||"")>(c.misAJour||"")){ m.set(p.id,p); u++; } }
+      state.draft=[...m.values()]; await saveDraft(); renderAll();
+      toast(`Importation : ${a} ajoutée(s), ${u} mise(s) à jour.`);
+    };
+    r.readAsText(file);
+  }
+  function modal(inner, max){ $("#modal-root").innerHTML = `<div class="overlay"><div class="modal" style="max-width:${max||780}px">${inner}</div></div>`; }
+  function closeModal(){ $("#modal-root").innerHTML=""; state.editing=null; }
+
+  const F = [
+    ["titre","Titre","select",["Abbé","Père","Mgr","Chanoine","Révérend Père"]],
+    ["statut","Statut","select",Object.keys(STATUTS)],
+    ["prenom","Prénom(s)"],["nom","Nom *"],
+    ["dateNaissance","Date de naissance","date"],["lieuNaissance","Lieu de naissance"],
+    ["parents","Parents","text",null,true],
+    ["seminaire","Séminaire(s) / formation","text",null,true],
+    ["dateDiaconat","Ordination diaconale","date"],["dateOrdination","Ordination sacerdotale","date"],
+    ["lieuOrdination","Lieu d'ordination"],["ordonnePar","Ordonné par"],
+    ["incardination","Incardination / congrégation"],["devise","Devise sacerdotale"],
+    ["dateDeces","Date de décès","date"],["lieuDeces","Lieu de décès"],
+    ["inhumation","Lieu d'inhumation","text",null,true],
+  ];
+  function field([k,lab,type="text",opts,full],p){
+    const v = p[k]??"";
+    if(type==="select") return `<div class="${full?"full":""}"><label class="fl" for="f_${k}">${lab}</label><select id="f_${k}" name="${k}">${opts.map(o=>`<option value="${esc(o)}" ${o===v?"selected":""}>${esc(STATUTS[o]||o)}</option>`).join("")}</select></div>`;
+    return `<div class="${full?"full":""}"><label class="fl" for="f_${k}">${lab}</label><input id="f_${k}" name="${k}" type="${type}" value="${esc(v)}"></div>`;
+  }
+  const prow = (x={}) => `<div class="prow"><input class="pd" placeholder="Début" inputmode="numeric" value="${esc(x.debut||"")}"><input class="pfin" placeholder="Fin" inputmode="numeric" value="${esc(x.fin||"")}"><input class="pf" placeholder="Fonction (curé, vicaire, recteur…)" value="${esc(x.fonction||"")}"><input class="pl" placeholder="Paroisse / lieu" value="${esc(x.lieu||"")}"><button type="button" class="x" data-rmrow>✕</button></div>`;
+  function openForm(p){
+    p = p ? JSON.parse(JSON.stringify(p)) : {id:newId(), titre:"Abbé", statut:"actif", parcours:[]};
+    state.editing = p;
+    modal(`<form id="form">
+      <header><h2>${p.nom?"Modifier la fiche":"Nouvelle fiche"}</h2><button type="button" class="btn ghost" data-close style="margin-left:auto">✕</button></header>
+      <div class="body">
+        <div class="photo-pick"><div id="ph-prev">${avatar(p)}</div>
+          <div><label class="fl" for="ph">Photo (facultative)</label><input id="ph" type="file" accept="image/*">
+          ${p.photo?'<button type="button" class="btn sm ghost" data-rmphoto>Retirer la photo</button>':""}</div></div>
+        <div class="fgrid">${F.map(f=>field(f,p)).join("")}</div>
+        <fieldset><legend>Parcours pastoral</legend>
+          <div class="prow prow-h"><span>Début</span><span>Fin</span><span>Fonction</span><span>Paroisse / lieu</span><span></span></div>
+          <div id="prows">${(p.parcours||[]).map(prow).join("") || prow()}</div>
+          <button type="button" class="btn sm" data-addrow>＋ Ajouter une affectation</button>
+        </fieldset>
+        <div class="fgrid" style="margin-top:16px">
+          <div class="full"><label class="fl" for="f_bio">Biographie</label><textarea id="f_bio" name="biographie">${esc(p.biographie||"")}</textarea></div>
+          <div class="full"><label class="fl" for="f_tem">Témoignages & souvenirs</label><textarea id="f_tem" name="temoignages">${esc(p.temoignages||"")}</textarea></div>
+          <div class="full"><label class="fl" for="f_src">Sources (registres, archives, entretiens…)</label><textarea id="f_src" name="sources" style="min-height:70px">${esc(p.sources||"")}</textarea></div>
+        </div>
+      </div>
+      <footer><button type="button" class="btn" data-close>Annuler</button><button type="submit" class="btn primary">Enregistrer</button></footer>
+    </form>`);
+    $("#ph").addEventListener("change", onPhoto);
+  }
+  function onPhoto(e){
+    const f = e.target.files[0]; if(!f) return;
+    const img = new Image(), url = URL.createObjectURL(f);
+    img.onload = () => {
+      const S=240, c=document.createElement("canvas"); c.width=S; c.height=S;
+      const side=Math.min(img.width,img.height);
+      c.getContext("2d").drawImage(img,(img.width-side)/2,(img.height-side)/2,side,side,0,0,S,S);
+      state.editing.photo = c.toDataURL("image/jpeg",.8); $("#ph-prev").innerHTML = avatar(state.editing); URL.revokeObjectURL(url);
+    };
+    img.onerror = () => toast("Image illisible."); img.src = url;
+  }
+  async function submit(e){
+    e.preventDefault();
+    const p = state.editing;
+    for(const [k,v] of new FormData(e.target).entries()) if(typeof v==="string") p[k]=v.trim();
+    p.parcours = $$("#prows .prow").map(r=>({debut:r.querySelector(".pd").value.trim(), fin:r.querySelector(".pfin").value.trim(), fonction:r.querySelector(".pf").value.trim(), lieu:r.querySelector(".pl").value.trim()})).filter(x=>x.debut||x.fin||x.fonction||x.lieu);
+    if(!p.nom){ toast("Le nom est obligatoire."); $("#f_nom").focus(); return; }
+    p.misAJour = new Date().toISOString();
+    const i = state.draft.findIndex(x=>x.id===p.id); if(i>=0) state.draft[i]=p; else state.draft.push(p);
+    try{ await saveDraft(); }catch(_){ return; }
+    const id = p.id; closeModal(); renderAll(); toast("Fiche enregistrée (brouillon). Pensez à publier.");
+    location.hash = "pretre-"+id;
+  }
+  function confirmDel(id){
+    const p = state.draft.find(x=>x.id===id); if(!p) return;
+    modal(`<header><h2>Supprimer cette fiche ?</h2></header><div class="body">La fiche de <b>${esc(fullName(p))}</b> sera retirée des archives (après publication).</div>
+      <footer><button class="btn" data-close>Annuler</button><button class="btn primary" data-confirmdel="${esc(id)}">Supprimer</button></footer>`, 440);
+  }
+
+  /* ---------- événements ---------- */
+  document.addEventListener("click", async e=>{
+    const t = e.target.closest("button"); if(!t) return;
+    if(t.id==="burger") $("#menu").classList.toggle("open");
+    else if(t.hasAttribute("data-add")) openForm();
+    else if(t.dataset.edit) openForm(state.draft.find(x=>x.id===t.dataset.edit));
+    else if(t.dataset.del) confirmDel(t.dataset.del);
+    else if(t.dataset.confirmdel){ state.draft = state.draft.filter(x=>x.id!==t.dataset.confirmdel); await saveDraft(); closeModal(); renderAll(); location.hash="pretres"; toast("Fiche supprimée (brouillon)."); }
+    else if(t.hasAttribute("data-close")) closeModal();
+    else if(t.hasAttribute("data-addrow")) $("#prows").insertAdjacentHTML("beforeend", prow());
+    else if(t.hasAttribute("data-rmrow")) t.closest(".prow").remove();
+    else if(t.hasAttribute("data-rmphoto")){ delete state.editing.photo; $("#ph-prev").innerHTML = avatar(state.editing); t.remove(); }
+    else if(t.hasAttribute("data-print")) window.print();
+    else if(t.hasAttribute("data-publish")) publish();
+    else if(t.hasAttribute("data-howto")) howTo(false);
+    else if(t.hasAttribute("data-pwchange")) pwForm();
+    else if(t.hasAttribute("data-copysugg")){ if(!$("#s_msg").value.trim()){ toast("Écrivez d'abord votre message."); return; }
+      const x = suggText(), v = x.subject+"\n\n"+x.body; let ok=false;
+      try{ await navigator.clipboard.writeText(v); ok=true; }catch(_){ try{ const ta=document.createElement("textarea"); ta.value=v; document.body.appendChild(ta); ta.select(); ok=document.execCommand("copy"); ta.remove(); }catch(__){} }
+      toast(ok?"Message copié. Collez-le dans un e-mail à rabykonde0822@gmail.com":"Copie impossible : sélectionnez le texte à la main."); }
+    else if(t.dataset.copy){ const v=t.dataset.copy; let ok=false;
+      try{ await navigator.clipboard.writeText(v); ok=true; }catch(_){
+        try{ const ta=document.createElement("textarea"); ta.value=v; document.body.appendChild(ta); ta.select(); ok=document.execCommand("copy"); ta.remove(); }catch(__){} }
+      toast(ok?"Numéro copié : "+v:"Numéro : "+v); }
+    else if(t.hasAttribute("data-showpw")){ const i=$("#pw"); i.type = i.type==="password"?"text":"password"; }
+    else if(t.hasAttribute("data-logout")){ state.admin=false; try{ sessionStorage.removeItem("adm"); }catch(_){} renderAll(); if(state.view==="fiche") renderFiche(state.ficheId); toast("Vous avez quitté l'administration."); }
+  });
+  function suggText(){
+    const f = $("#sugg"), g = n => f.querySelector(`[name=${n}]`).value.trim();
+    return { subject: `Suggestion – ${g("type")}`,
+      body: `${g("message")}\n\n—\nNom : ${g("nom")||"(non indiqué)"}\nContact : ${g("contact")||"(non indiqué)"}\nType : ${g("type")}\nEnvoyé depuis le site des Archives des Prêtres – Diocèse de Boma` };
+  }
+  function sendSugg(e){
+    e.preventDefault();
+    if(!$("#s_msg").value.trim()){ toast("Écrivez votre message."); $("#s_msg").focus(); return; }
+    const t = suggText();
+    location.href = `mailto:rabykonde0822@gmail.com?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(t.body)}`;
+    $("#sugg-note").innerHTML = "Votre messagerie devrait s'ouvrir avec le message prêt : appuyez sur <b>Envoyer</b> pour le transmettre. Si rien ne s'est ouvert, touchez « Copier le message » et envoyez-le à <b>rabykonde0822@gmail.com</b>. Merci pour votre suggestion !";
+  }
+  document.addEventListener("submit", e=>{ if(e.target.id==="sugg") sendSugg(e); else if(e.target.id==="form") submit(e); else if(e.target.id==="login") doLogin(e); else if(e.target.id==="pwchange") doPwChange(e); });
+  document.addEventListener("keydown", e=>{ if(e.key==="Escape" && $("#modal-root").innerHTML) closeModal(); });
+  ["#q","#f-statut","#f-tri"].forEach(s=>$(s).addEventListener("input", renderAll));
+
+  try{ if(sessionStorage.getItem("adm")==="1") state.admin = true; }catch(_){}
+  renderAll(); route(); load();
+})();
+</script>
+</body>
+</html>
